@@ -1,4 +1,4 @@
-package com.example.flutter_toonflix
+package com.example.flutter_study
 
 import io.flutter.embedding.android.FlutterActivity
 
