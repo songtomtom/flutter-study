@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_toonflix/widget/button.dart';
+import 'package:flutter_toonflix/widget/currency_card.dart';
 
 void main() {
   runApp(const App());
@@ -82,6 +83,48 @@ class App extends StatelessWidget {
                     textColor: Colors.white,
                   ),
                 ],
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  const Text('Wallets',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 36,
+                        fontWeight: FontWeight.w600,
+                      )),
+                  Text('View All',
+                      style: TextStyle(
+                        color: Colors.white.withOpacity(0.8),
+                        fontSize: 10,
+                        fontWeight: FontWeight.w600,
+                      )),
+                ],
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const CurrencyCard(
+                name: 'Euro',
+                code: 'EUR',
+                amount: '6 428',
+                icon: Icons.euro_rounded,
+              ),
+              const CurrencyCard(
+                name: 'Euro',
+                code: 'EUR',
+                amount: '6 428',
+                icon: Icons.euro_rounded,
+              ),
+              const CurrencyCard(
+                name: 'Euro',
+                code: 'EUR',
+                amount: '6 428',
+                icon: Icons.euro_rounded,
               )
             ],
           ),
