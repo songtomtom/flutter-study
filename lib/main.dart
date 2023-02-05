@@ -3,11 +3,11 @@ import 'package:flutter_study/widget/button.dart';
 import 'package:flutter_study/widget/currency_card.dart';
 
 void main() {
-  runApp(const App());
+  runApp(StatefullApp());
 }
 
-class App extends StatelessWidget {
-  const App({super.key});
+class StatelessApp extends StatelessWidget {
+  const StatelessApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -140,6 +140,54 @@ class App extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class StatefullApp extends StatefulWidget {
+  const StatefullApp({super.key});
+
+  @override
+  State<StatefullApp> createState() => _StatefullAppState();
+}
+
+class _StatefullAppState extends State<StatefullApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+          textTheme: const TextTheme(
+              titleLarge: TextStyle(
+        color: Colors.red,
+      ))),
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              MyLargeTitle(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MyLargeTitle extends StatelessWidget {
+  const MyLargeTitle({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      'My Large Count',
+      style: TextStyle(
+        fontSize: 30,
+        color: Theme.of(context).textTheme.titleLarge!.color,
       ),
     );
   }
